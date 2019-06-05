@@ -92,7 +92,7 @@ for iteration in xrange(iterations):
 		centers[i] = np.mean(dataInCenter, axis=0)
 
 	#TODO check for convergence
-	print "Centers Iteration num", iteration, ": \n", centers
+	print("Centers Iteration num", iteration, ": \n", centers)
 
 #	set the pixels on original image to be that of the pixel's cluster's centroid
 for index, item in enumerate(pixelClusterAppartenance):
