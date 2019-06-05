@@ -18,12 +18,12 @@ iterations = 5
 #	Parse command-line arguments
 #	sets K, inputName & outputName
 if len(sys.argv) < 4:
-	print "Error: Insufficient arguments, imageSegmentation takes three arguments"
+	print("Error: Insufficient arguments, imageSegmentation takes three arguments")
 	sys.exit()
 else:
 	K = int(sys.argv[1])
-	if K < 3:
-		print "Error: K has to be greater than 2"
+	if K < 2:
+		print("Error: K has to be greater than 1")
 		sys.exit()
 	inputName = sys.argv[2]
 	outputName = sys.argv[3]
