@@ -61,7 +61,7 @@ centers = np.ndarray(shape=(K,5))
 for index, center in enumerate(centers):
 	centers[index] = np.random.uniform(minValue, maxValue, 5)
 
-for iteration in xrange(iterations):
+for iteration in range(iterations):
 	#	Set pixels to their cluster
 	for idx, data in enumerate(dataVector_scaled):
 		distanceToCenters = np.ndarray(shape=(K))
@@ -82,7 +82,7 @@ for iteration in xrange(iterations):
 	##################################################################################################
 
 	#	Move centers to the centroid of their cluster
-	for i in xrange(K):
+	for i in range(K):
 		dataInCenter = []
 
 		for index, item in enumerate(pixelClusterAppartenance):
@@ -103,8 +103,8 @@ for index, item in enumerate(pixelClusterAppartenance):
 #	Save image
 image = Image.new("RGB", (imageW, imageH))
 
-for y in xrange(imageH):
-	for x in xrange(imageW):
+for y in range(imageH):
+	for x in range(imageW):
 	 	image.putpixel((x, y), (int(dataVector[y * imageW + x][0]), 
 	 							int(dataVector[y * imageW + x][1]),
 	 							int(dataVector[y * imageW + x][2])))
